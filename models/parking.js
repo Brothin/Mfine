@@ -11,8 +11,6 @@ const parkingSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator: function (v) {
-        // Sample validation for registration number
-        // Modify as per your requirement
         return /^[A-Z]{2}\d{2}[A-Z]{1,2}\d{1,4}$/.test(v);
       },
       message: "Invalid registration number",
